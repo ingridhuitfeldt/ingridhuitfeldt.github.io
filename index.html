@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingrid Huitfeldt</title>
+<meta name="description" content="Ingrid Huitfeldt is an Associate Professor of Economics at BI Norwegian Business School. Research on healthcare, public and labor economics.">
+<meta property="og:title" content="Ingrid Huitfeldt">
+<meta property="og:description" content="Associate Professor of Economics, BI Norwegian Business School. Healthcare, public and labor economics.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ingridhuitfeldt.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F5F6F2;
+  --ink:#12181B;
+  --muted:#5E6B6C;
+  --rule:#DDE1D8;
+  --spruce:#17564F;
+  --spruce-soft:#E3EDE9;
+  --measure:52rem;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:16.5px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+
+/* ---------- hero ---------- */
+.hero{padding:5rem 0 3rem}
+.hero-grid{display:grid;grid-template-columns:1fr 148px;gap:2.5rem;align-items:start}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--spruce);margin:0 0 1.1rem
+}
+h1{
+  font-family:Newsreader,Georgia,serif;
+  font-weight:400;font-size:clamp(2.9rem,8vw,4.6rem);
+  line-height:1.02;letter-spacing:-.025em;margin:0 0 1.4rem
+}
+.lead{
+  font-family:Newsreader,Georgia,serif;
+  font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.4;
+  margin:0 0 1.5rem;max-width:34ch
+}
+.bio{color:var(--muted);max-width:60ch;margin:0 0 1.8rem;font-size:.97rem}
+.bio a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
+.bio a:hover{border-bottom-color:var(--spruce);color:var(--spruce)}
+
+.portrait{width:148px;height:180px;overflow:hidden;background:var(--spruce-soft);border-radius:2px}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92)}
+
+.contact{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.contact a{
+  font-family:"IBM Plex Mono",monospace;font-size:.78rem;
+  text-decoration:none;color:var(--ink);
+  border:1px solid var(--rule);border-radius:2px;
+  padding:.42rem .7rem;background:transparent;
+  transition:background .15s ease,border-color .15s ease
+}
+.contact a:hover{background:var(--spruce);border-color:var(--spruce);color:#fff}
+
+/* ---------- sticky nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:10;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(8px);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)
+}
+.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:.8rem 0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);white-space:nowrap
+}
+.nav a:hover{color:var(--spruce)}
+
+/* ---------- sections ---------- */
+.section{padding:3.5rem 0 1rem}
+.section-head{
+  display:flex;align-items:baseline;gap:1rem;
+  border-bottom:1px solid var(--ink);padding-bottom:.55rem;margin-bottom:2rem
+}
+.section-head h2{
+  font-family:"IBM Plex Sans",sans-serif;font-weight:600;
+  font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0
+}
+.section-head .count{
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted);margin-left:auto
+}
+
+.item{display:grid;grid-template-columns:3.6rem 1fr;gap:1.2rem;padding:0 0 1.9rem}
+.year{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted);padding-top:.25rem}
+.item h3{
+  font-family:Newsreader,Georgia,serif;font-weight:500;
+  font-size:1.22rem;line-height:1.3;margin:0 0 .35rem;letter-spacing:-.005em
+}
+.byline{font-size:.9rem;color:var(--muted);margin:0 0 .1rem}
+.byline a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule)}
+.byline a:hover{color:var(--spruce);border-bottom-color:var(--spruce)}
+.outlet{font-size:.9rem;margin:0 0 .7rem;color:var(--ink)}
+.outlet em{font-style:italic}
+
+.links{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:0;padding:0}
+.links a{
+  font-family:"IBM Plex Mono",monospace;font-size:.71rem;
+  text-decoration:none;color:var(--spruce);
+  background:var(--spruce-soft);border-radius:2px;
+  padding:.24rem .5rem;display:inline-block;
+  transition:background .15s ease,color .15s ease
+}
+.links a:hover{background:var(--spruce);color:#fff}
+
+/* media list */
+.media .item{grid-template-columns:5.2rem 1fr}
+.media h3{font-size:1.05rem;font-family:"IBM Plex Sans",sans-serif;font-weight:500;letter-spacing:0}
+.media .gloss{font-size:.87rem;color:var(--muted);margin:.15rem 0 0}
+.media .item{padding-bottom:1.4rem}
+
+footer{
+  border-top:1px solid var(--rule);margin-top:3rem;padding:2rem 0 4rem;
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted)
+}
+
+a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px}
+
+/* ---------- responsive ---------- */
+@media(max-width:640px){
+  .hero{padding:3rem 0 2rem}
+  .hero-grid{grid-template-columns:1fr;gap:1.6rem}
+  .portrait{width:112px;height:136px;order:-1}
+  .item,.media .item{grid-template-columns:1fr;gap:.3rem}
+  .year{padding-top:0}
+}
+
+/* ---------- motion ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero > .wrap > *{animation:rise .5s ease both}
+.hero .hero-grid{animation-delay:.05s}
+.hero .contact{animation-delay:.15s}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Associate Professor of Economics</p>
+        <h1>Ingrid Huitfeldt</h1>
+        <p class="lead">My research focuses on topics in healthcare, public and labor economics.</p>
+        <p class="bio">
+          I am an Associate Professor at the Department of Economics at
+          <a href="https://www.bi.edu/research/find-department/department-of-economics/">BI Norwegian Business School</a>,
+          and affiliated with the Research Department at
+          <a href="https://www.ssb.no/en/forskning/forskning-i-ssb">Statistics Norway</a> and the
+          <a href="https://cepr.org/about/people/ingrid-huitfeldt">Centre for Economic Policy Research (CEPR)</a>.
+          I received my Ph.D. in Economics from the
+          <a href="http://www.sv.uio.no/econ/english/">University of Oslo</a> in 2017.
+        </p>
+      </div>
+
+      <!-- Bytt ut src med din egen fil, f.eks. photo.jpg, og legg den i samme mappe -->
+      <div class="portrait">
+        <img src="https://lh3.googleusercontent.com/sitesv/AG8ngQWAsuWBv4EBdPHSJqeuRmMlwd89d5Uo8rXvzhZ9HTGiHXYGkyjcis-yHU4SxzRZ8YzMmTJMwhoOnSriRHnwBOXz97g4qNIiSugrFqw1huWAPHfRPzDrBzGOyyGtByaKV86wiJDbZHK1871Nw4MExESvvYEetjCThlwfTpYOxbbcarZZmL-YPq6k5K9p3rwM6cXPKA1UvlFQhi9SQms=w400"
+             alt="Ingrid Huitfeldt" loading="lazy"
+             onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <ul class="contact">
+      <li><a href="mailto:ingrid.huitfeldt@gmail.com">ingrid.huitfeldt@gmail.com</a></li>
+      <!-- Fyll inn eller slett de tre neste -->
+      <li><a href="#" >CV (PDF)</a></li>
+      <li><a href="#">Google Scholar</a></li>
+      <li><a href="https://cepr.org/about/people/ingrid-huitfeldt">CEPR profile</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <ul>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#working">Working papers</a></li>
+      <li><a href="#progress">Work in progress</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== PUBLICATIONS ===== -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head"><h2>Publications and accepted papers</h2><span class="count">9</span></div>
+
+    <article class="item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Reconciling Estimates of the Long-Term Earnings Effect of Fertility</h3>
+        <p class="byline">with <a href="https://sites.google.com/site/simonsoebstadbensnes/">Simon Bensnes</a> and <a href="http://leuven.economists.nl/">Edwin Leuven</a></p>
+        <p class="outlet">Accepted at the <em>Journal of Labor Economics</em></p>
+        <ul class="links">
+          <li><a href="https://www.dropbox.com/scl/fi/3kdvqer2kpe40a54shas3/BensnesHuitfeldtLeuven2026.pdf?rlkey=drkwjnvvqvseecw86c3qvq6yl&st=2ubgsnfr&dl=0">PDF</a></li>
+          <li><a href="https://www.rfberlin.com/wp-content/uploads/2026/01/26043.pdf">RFBerlin 043/26</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Designing Dynamic Reassignment Mechanisms: Evidence from GP Allocation</h3>
+        <p class="byline">with <a href="https://www.victoriamarone.com/">Victoria Marone</a> and <a href="https://sites.google.com/view/danielwaldinger">Daniel Waldinger</a></p>
+        <p class="outlet">Accepted at the <em>American Economic Review</em></p>
+        <ul class="links">
+          <li><a href="https://www.aeaweb.org/articles?id=10.1257/aer.20240617&&from=f">Published version</a></li>
+          <li><a href="https://www.nber.org/papers/w32458">NBER wp32458</a></li>
+          <li><a href="https://www.dn.no/innlegg/helse/leger/fastleger/enkelt-a-forbedre-fastlegeordningen-med-en-algoritme/2-1-1692543">Press (DN)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Selection in Surveys: Using Randomized Incentives to Detect and Account for Nonresponse Bias</h3>
+        <p class="byline">with <a href="https://www.denizdutz.com/">Deniz Dutz</a>, <a href="https://bfi.uchicago.edu/scholar/santiago-lacouture/">Santiago Lacouture</a>, <a href="https://sites.google.com/site/magnemogstad/">Magne Mogstad</a>, <a href="https://a-torgovitsky.github.io/">Alexander Torgovitsky</a> and <a href="https://sites.google.com/site/winnielillianvandijk/">Winnie van Dijk</a></p>
+        <p class="outlet">Accepted at the <em>Review of Economic Studies</em></p>
+        <ul class="links">
+          <li><a href="https://academic.oup.com/restud/advance-article/doi/10.1093/restud/rdag003/8494738?searchresult=1">Published version</a></li>
+          <li><a href="https://www.dropbox.com/scl/fi/86q5lsihxlim9qb8kbydf/ss-main.pdf?rlkey=xglyz8ic5rkry7wjnjf7frg3j&e=1&dl=0">PDF</a></li>
+          <li><a href="https://www.nber.org/papers/w29549">NBER wp29549</a></li>
+          <li><a href="https://bfi.uchicago.edu/working-paper/selection-in-surveys/">BFI wp</a></li>
+          <li><a href="https://bfi.uchicago.edu/insight/research-summary/selection-in-surveys/">Non-technical summary</a></li>
+          <li><a href="https://voxeu.org/article/selection-surveys">VoxEU</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2024</div>
+      <div>
+        <h3>Hospital Queues, Patient Health and Labor Supply</h3>
+        <p class="byline">with <a href="http://sites.google.com/site/annagodoey/home">Anna Godøy</a>, Venke F. Haaland and Mark Votruba</p>
+        <p class="outlet"><em>American Economic Journal: Economic Policy</em></p>
+        <ul class="links">
+          <li><a href="https://www.aeaweb.org/articles?id=10.1257/pol.20210399&&from=f">Published version</a></li>
+          <li><a href="https://www.dropbox.com/scl/fi/6gypb5vkv2syxig9e2ps2/paper_condaccept.pdf?rlkey=nka4jtrq6obircqaktdvrij94&e=1&dl=0">PDF</a></li>
+          <li><a href="https://www.dn.no/innlegg/helse/uforetrygd/sykehus/helsekoene-kan-gi-varig-uforhet/2-1-1585803">Press (DN)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2022</div>
+      <div>
+        <h3>Internal Labor Markets: A Worker Flow Approach</h3>
+        <p class="byline">with Andreas R. Kostøl, Jan Nimczik and Andrea Weber</p>
+        <p class="outlet"><em>Journal of Econometrics</em></p>
+        <ul class="links">
+          <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S030440762200063X">Published version</a></li>
+          <li><a href="https://docs.iza.org/dp14637.pdf">IZA dp14637</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2021</div>
+      <div>
+        <h3>Hospital Reimbursement and Capacity Constraints: Evidence from Orthopedic Surgeries</h3>
+        <p class="outlet"><em>Health Policy</em></p>
+        <ul class="links">
+          <li><a href="https://authors.elsevier.com/sd/article/S0168-8510%2821%2900047-6">Published version</a></li>
+          <li><a href="https://www.ssb.no/en/forskning/discussion-papers/_attachment/369713">SSB discussion paper</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2020</div>
+      <div>
+        <h3>Rumor Has It: How Do Patients Respond to Patient-Generated Physician Ratings?</h3>
+        <p class="byline">with <a href="https://sites.google.com/site/simonsoebstadbensnes/">Simon Bensnes</a></p>
+        <p class="outlet"><em>Journal of Health Economics</em></p>
+        <ul class="links">
+          <li><a href="https://www.sciencedirect.com/science/article/pii/S0167629620310614">Published version</a></li>
+          <li><a href="https://www.dropbox.com/s/sj1a7j6vt2768qa/BensnesHuitfeldt_JHE2020.pdf?dl=0">PDF</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2020</div>
+      <div>
+        <h3>Regional Variation in Health Care Utilization and Mortality</h3>
+        <p class="byline">with <a href="http://sites.google.com/site/annagodoey/home">Anna Godøy</a></p>
+        <p class="outlet"><em>Journal of Health Economics</em></p>
+        <ul class="links">
+          <li><a href="https://www.sciencedirect.com/science/article/pii/S0167629619303819?via%3Dihub">Published version</a></li>
+          <li><a href="https://www.dropbox.com/s/g8tot92dpwkwgbn/MoversJHEconditional.pdf?dl=0">PDF</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2015</div>
+      <div>
+        <h3>Costs and Quality at the Hospital Level in the Nordic Countries</h3>
+        <p class="byline">with S. A. C. Kittelsen and co-authors</p>
+        <p class="outlet"><em>Health Economics</em></p>
+        <ul class="links">
+          <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hec.3260">Published version</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== WORKING PAPERS ===== -->
+<section class="section" id="working">
+  <div class="wrap">
+    <div class="section-head"><h2>Working papers</h2><span class="count">1</span></div>
+
+    <article class="item">
+      <div class="year">2025</div>
+      <div>
+        <h3>The Distributional Effects of Cost-Sharing in a Universal Healthcare System</h3>
+        <p class="byline">with <a href="https://sites.google.com/site/simonsoebstadbensnes/">Simon Bensnes</a> and <a href="https://www.victoriamarone.com/research">Victoria Marone</a></p>
+        <ul class="links">
+          <li><a href="https://victoriamarone.github.io/files/BHM_Copays.pdf">PDF</a></li>
+          <li><a href="https://www.nber.org/system/files/working_papers/w34700/w34700.pdf">NBER wp34700</a></li>
+          <li><a href="https://cepr.org/system/files/publication-files/DP21077.pdf">CEPR dp21077</a></li>
+          <li><a href="https://cepr.org/voxeu/columns/distributional-consequences-cost-sharing-universal-healthcare">VoxEU</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== WORK IN PROGRESS ===== -->
+<section class="section" id="progress">
+  <div class="wrap">
+    <div class="section-head"><h2>Work in progress</h2><span class="count">5</span></div>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>What Do Corporate Boards Do? Aggregate Effects of Board Gender Quotas</h3>
+        <p class="byline">with <a href="https://sites.google.com/view/cblandhol">Christine Blandhol</a> and <a href="https://sites.google.com/site/ragnhildschreiner/">Ragnhild Schreiner</a></p>
+        <ul class="links">
+          <li><a href="https://cblandhol.github.io/JMP/gender_boards_abstract.pdf">Extended abstract</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Health Insurance for Healthcare Amenities</h3>
+        <p class="byline">with <a href="https://www.victoriamarone.com">Victoria Marone</a></p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Capacity and Waitlist Design for Healthcare Services</h3>
+        <p class="byline">with <a href="https://www.victoriamarone.com">Victoria Marone</a> and <a href="https://sites.google.com/view/danielwaldinger">Daniel Waldinger</a></p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Breastfeeding, Health Outcomes and Maternal Labor Supply</h3>
+        <p class="byline">with <a href="https://www.frisch.uio.no/medarbeidere/ninaedra/">Nina Drange</a> and <a href="https://www.moniquedehaan.nl/">Monique De Haan</a></p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Universal Breast Cancer Screening: Heterogeneity, Inequality, and Welfare</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== MEDIA ===== -->
+<section class="section media" id="media">
+  <div class="wrap">
+    <div class="section-head"><h2>Media and op-eds</h2><span class="count">Norwegian</span></div>
+
+    <article class="item">
+      <div class="year">09.2024</div>
+      <div>
+        <h3><a href="https://www.dn.no/innlegg/helse/leger/fastleger/enkelt-a-forbedre-fastlegeordningen-med-en-algoritme/2-1-1692543">Enkelt å forbedre fastlegeordningen – med en algoritme</a></h3>
+        <p class="gloss">Dagens Næringsliv · Improving the GP scheme with an algorithm</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">05.2024</div>
+      <div>
+        <h3><a href="https://www.dn.no/innlegg/vi-vet-ikke-om-privat-helse-truer-velferdsstaten-mangler-data/2-1-1638386">Vi vet ikke om privat helse truer velferdsstaten</a></h3>
+        <p class="gloss">Dagens Næringsliv · We don't know whether private healthcare threatens the welfare state</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">01.2024</div>
+      <div>
+        <h3><a href="https://www.dn.no/innlegg/helse/uforetrygd/sykehus/helsekoene-kan-gi-varig-uforhet/2-1-1585803">Helsekøene kan gi varig uførhet</a></h3>
+        <p class="gloss">Dagens Næringsliv · Long hospital queues may lead to permanent disability</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">04.2019</div>
+      <div>
+        <h3><a href="https://www.aftenposten.no/meninger/debatt/i/wP3rl5/Vi-bor-trolig-ikke-anbefale-kvinner-a-fullamme-utover-fire-maneder--Huitfeldt_-Andresen-og-Sterri">Ammeråd og foreldrepermisjon</a></h3>
+        <p class="gloss">Aftenposten · Breastfeeding guidelines and parental leave</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">03.2019</div>
+      <div>
+        <h3><a href="https://www.aftenposten.no/meninger/debatt/i/zLd9VK/Gi-gjerne-pupp_-men-ikke-for-helsegevinstene--Andresen_-Huitfeldt-og-Sterri">Gi gjerne pupp, men ikke for helsegevinstene</a></h3>
+        <p class="gloss">Aftenposten · Many reasons to breastfeed; health gains probably not one</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">03.2019</div>
+      <div>
+        <h3><a href="https://podtail.com/en/podcast/nrk-ekko-et-aktuelt-samfunnsprogram/kan-amming-vaere-mindre-viktig/">Kan amming være mindre viktig?</a></h3>
+        <p class="gloss">NRK Ekko · Podcast</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">02.2019</div>
+      <div>
+        <h3><a href="https://itunes.apple.com/no/podcast/forklart/id1437259636?mt=2">Pappakvoten provoserer: Dette sier forskningen</a></h3>
+        <p class="gloss">Aftenposten Forklart · Podcast</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">02.2019</div>
+      <div>
+        <h3><a href="https://www.aftenposten.no/meninger/debatt/i/9m7g3w/Det-meste-du-blir-fortalt-om-amming_-kan-vare-feil--Andresen_-Huitfeldt-og-Sterri">Det meste du blir fortalt om amming, kan være feil</a></h3>
+        <p class="gloss">Aftenposten · Myths and facts about breastfeeding</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">02.2019</div>
+      <div>
+        <h3><a href="https://www.aftenposten.no/meninger/debatt/i/P3bxbp/Hva-kan-vi-forvente-av-en-tredelt-foreldrepermisjon--Ingrid-Huitfeldt_-Martin-Andresen_-Aksel-Braanen-Sterri">Hva kan vi forvente av en tredelt foreldrepermisjon?</a></h3>
+        <p class="gloss">Aftenposten · What can we expect from the daddy quota?</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Ingrid Huitfeldt · Department of Economics, BI Norwegian Business School · ingrid.huitfeldt@gmail.com
+  </div>
+</footer>
+
+</body>
+</html>

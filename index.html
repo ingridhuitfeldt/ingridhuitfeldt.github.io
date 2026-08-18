@@ -58,7 +58,7 @@ h1{
   font-weight:400;font-size:clamp(2.6rem,7vw,4rem);
   line-height:1;letter-spacing:-.025em;margin:0
 }
-.bio{color:var(--muted);max-width:62ch;margin:0 0 1.8rem;font-size:.97rem}
+.bio{color:var(--muted);max-width:72ch;margin:0 0 1.8rem;font-size:.97rem}
 .bio a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
 .bio a:hover{border-bottom-color:var(--spruce);color:var(--spruce)}
 
@@ -114,6 +114,22 @@ h1{
 .outlet{font-size:.9rem;margin:0 0 .7rem;color:var(--ink)}
 .outlet em{font-style:italic}
 
+/* expandable abstract */
+details.abs{margin:.5rem 0 .7rem}
+details.abs summary{
+  font-family:"IBM Plex Mono",monospace;font-size:.71rem;
+  color:var(--spruce);cursor:pointer;list-style:none;
+  display:inline-block;background:var(--spruce-soft);
+  border-radius:2px;padding:.24rem .5rem;
+  transition:background .15s ease,color .15s ease
+}
+details.abs summary::-webkit-details-marker{display:none}
+details.abs summary:hover{background:var(--spruce);color:#fff}
+details.abs p{
+  font-size:.88rem;color:var(--muted);margin:.7rem 0 0;
+  padding-left:.9rem;border-left:2px solid var(--rule);max-width:72ch
+}
+
 .links{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:0;padding:0}
 .links a{
   font-family:"IBM Plex Mono",monospace;font-size:.71rem;
@@ -135,7 +151,7 @@ footer{
   font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted)
 }
 
-a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px}
 
 /* ---------- responsive ---------- */
 @media(max-width:640px){
@@ -358,8 +374,15 @@ a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius
       <div>
         <h3>What Do Corporate Boards Do? Aggregate Effects of Board Gender Quotas</h3>
         <p class="byline">with <a href="https://sites.google.com/view/cblandhol">Christine Blandhol</a> and <a href="https://sites.google.com/site/ragnhildschreiner/">Ragnhild Schreiner</a></p>
+        <details class="abs">
+          <summary>Abstract</summary>
+          <p>What is the value of having a corporate board for the firm? How does mandating gender diversity on corporate boards affect governance and firm performance? In June 2023, the Norwegian government extended its 40 percent board gender quota&mdash;previously applicable only to public corporations&mdash;to private limited liability companies, with implementation required by the end of 2024. Private LLCs are more numerous, typically closely held, and characterized by concentrated ownership and limited access to capital markets. These features make them organizationally distinct from publicly listed firms, where ownership and control are more separated. Evidence from the earlier reform affecting public corporations found substantial changes in board composition but little impact on firm performance or on women's broader labor market outcomes (Bertrand et al. 2019). Extending the quota to private LLCs provides an opportunity to study these mechanisms in a setting where ownership and management are more tightly linked, allowing for an assessment of both the efficiency costs of compliance and the achievement of the policymaker's objective of gender diversity.</p>
+          <p>Our empirical design compares private LLCs newly subject to the quota with those that already satisfied it and with public corporations, leveraging rich administrative data linking firms, boards, and individual earnings. This setting enables analysis of both direct effects on compliance with the regulation, board composition and director pay as well as firm outcomes.</p>
+          <p>We find a substantial compliance response among newly covered firms: roughly one-sixth of previously non-compliant private LLCs with at least three board members reached gender balance (40&ndash;60% women) within a year of implementation (see also Statistics Norway 2025). Our reduced-form analyses explore subsequent effects on board size, composition, director characteristics, and firm performance. The results will shed light on whether newly appointed women differ in experience, match quality, multiple directorships, or compensation, and on gender gaps in earnings among directors and potential substitution between board service and other employment.</p>
+          <p>Building on the empirical results, we build a model that endogenizes the board composition of the firm and use it to draw inferences about the aggregate effects of the regulation and the value of a corporate board to the firm. A representative shareholder chooses board size and composition subject to the quota, where directors differ in their match-specific productivity. The quota constraint forces deviations from the unconstrained optimum&mdash;through shrinking board size, higher pay premia for women, or less productive matches. We estimate the key model parameters using the reduced form moments and use the model to evaluate the cost of the regulation.</p>
+        </details>
         <ul class="links">
-          <li><a href="https://cblandhol.github.io/JMP/gender_boards_abstract.pdf">Extended abstract</a></li>
+          <li><a href="https://cblandhol.github.io/JMP/gender_boards_abstract.pdf">Extended abstract (PDF)</a></li>
         </ul>
       </div>
     </article>
@@ -369,6 +392,10 @@ a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius
       <div>
         <h3>Health Insurance for Healthcare Amenities</h3>
         <p class="byline">with <a href="https://www.victoriamarone.com">Victoria Marone</a></p>
+        <details class="abs">
+          <summary>Abstract</summary>
+          <p>We consider a model of a health insurance market in which sick consumers face a choice of healthcare amenity level. A minimum amenity level is available at no out-of-pocket cost (under some universal, base level of insurance coverage), but consumer heterogeneity drives demand for higher amenity levels. We study two central policy questions related to the design of &ldquo;top-up&rdquo; insurance markets: (i) at what level to set the universally-available minimum amenity level, and (ii) whether consumers should retain the monetary value of this benefit if they choose a higher amenity level. We estimate the model in the context of the Norwegian market for Assisted Reproductive Technology (ART).</p>
+        </details>
       </div>
     </article>
 

@@ -42,28 +42,25 @@ a{color:inherit}
 
 /* ---------- hero ---------- */
 .hero{padding:5rem 0 3rem}
-.hero-grid{display:grid;grid-template-columns:1fr 148px;gap:2.5rem;align-items:start}
+.identity{display:flex;align-items:center;gap:1.6rem;margin:0 0 1.6rem}
+.portrait{
+  width:104px;height:104px;flex-shrink:0;
+  overflow:hidden;background:var(--spruce-soft);border-radius:50%
+}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92)}
 .eyebrow{
   font-family:"IBM Plex Mono",monospace;
   font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--spruce);margin:0 0 1.1rem
+  color:var(--spruce);margin:0 0 .7rem
 }
 h1{
   font-family:Newsreader,Georgia,serif;
-  font-weight:400;font-size:clamp(2.9rem,8vw,4.6rem);
-  line-height:1.02;letter-spacing:-.025em;margin:0 0 1.4rem
+  font-weight:400;font-size:clamp(2.6rem,7vw,4rem);
+  line-height:1;letter-spacing:-.025em;margin:0
 }
-.lead{
-  font-family:Newsreader,Georgia,serif;
-  font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.4;
-  margin:0 0 1.5rem;max-width:34ch
-}
-.bio{color:var(--muted);max-width:60ch;margin:0 0 1.8rem;font-size:.97rem}
+.bio{color:var(--muted);max-width:62ch;margin:0 0 1.8rem;font-size:.97rem}
 .bio a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
 .bio a:hover{border-bottom-color:var(--spruce);color:var(--spruce)}
-
-.portrait{width:148px;height:180px;overflow:hidden;background:var(--spruce-soft);border-radius:2px}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92)}
 
 .contact{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
 .contact a{
@@ -143,8 +140,8 @@ a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius
 /* ---------- responsive ---------- */
 @media(max-width:640px){
   .hero{padding:3rem 0 2rem}
-  .hero-grid{grid-template-columns:1fr;gap:1.6rem}
-  .portrait{width:112px;height:136px;order:-1}
+  .identity{gap:1.1rem;margin-bottom:1.3rem}
+  .portrait{width:76px;height:76px}
   .item,.media .item{grid-template-columns:1fr;gap:.3rem}
   .year{padding-top:0}
 }
@@ -152,7 +149,7 @@ a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius
 /* ---------- motion ---------- */
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .hero > .wrap > *{animation:rise .5s ease both}
-.hero .hero-grid{animation-delay:.05s}
+.hero .bio{animation-delay:.05s}
 .hero .contact{animation-delay:.15s}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -163,26 +160,26 @@ a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius
 
 <header class="hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Associate Professor of Economics</p>
-        <h1>Ingrid Huitfeldt</h1>
-        <p class="lead">My research focuses on topics in healthcare, public and labor economics.</p>
-        <p class="bio">
-          I am an Associate Professor at the Department of Economics at
-          <a href="https://www.bi.edu/research/find-department/department-of-economics/">BI Norwegian Business School</a>,
-          and affiliated with the Research Department at
-          <a href="https://www.ssb.no/en/forskning/forskning-i-ssb">Statistics Norway</a> and the
-          <a href="https://cepr.org/about/people/ingrid-huitfeldt">Centre for Economic Policy Research (CEPR)</a>.
-          I received my Ph.D. in Economics from the
-          <a href="http://www.sv.uio.no/econ/english/">University of Oslo</a> in 2017.
-        </p>
-      </div>
-
+    <div class="identity">
       <div class="portrait">
         <img src="photo.jpg?v=2" alt="Ingrid Huitfeldt">
       </div>
+      <div>
+        <p class="eyebrow">Associate Professor of Economics</p>
+        <h1>Ingrid Huitfeldt</h1>
+      </div>
     </div>
+
+    <p class="bio">
+      I am an Associate Professor at the Department of Economics at
+      <a href="https://www.bi.edu/research/find-department/department-of-economics/">BI Norwegian Business School</a>,
+      where my research focuses on topics in healthcare, public and labor economics.
+      I am also affiliated with the Research Department at
+      <a href="https://www.ssb.no/en/forskning/forskning-i-ssb">Statistics Norway</a> and the
+      <a href="https://cepr.org/about/people/ingrid-huitfeldt">Centre for Economic Policy Research (CEPR)</a>.
+      I received my Ph.D. in Economics from the
+      <a href="http://www.sv.uio.no/econ/english/">University of Oslo</a> in 2017.
+    </p>
 
     <ul class="contact">
       <li><a href="mailto:ingrid.huitfeldt@gmail.com">ingrid.huitfeldt@gmail.com</a></li>

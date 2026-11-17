@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gender Pay Gap: Firms, Children, and Unpaid Work</title>
+<meta name="description" content="Research project funded by the Research Council of Norway (project 326391), led by Ingrid Huitfeldt.">
+<meta property="og:title" content="The Gender Pay Gap: Firms, Children, and Unpaid Work">
+<meta property="og:description" content="Research project funded by the Research Council of Norway (project 326391).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ingridhuitfeldt.com/gendergap.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#12181B;
+  --muted:#5E6B6C;
+  --rule:#E2E5DF;
+  --spruce:#17564F;
+  --spruce-soft:#E3EDE9;
+  --measure:52rem;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:16.5px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+
+/* ---------- hero ---------- */
+.hero{padding:4rem 0 2.5rem}
+.back{
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+  color:var(--muted);text-decoration:none;display:inline-block;margin:0 0 2rem
+}
+.back:hover{color:var(--spruce)}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--spruce);margin:0 0 .7rem
+}
+h1{
+  font-family:Newsreader,Georgia,serif;
+  font-weight:400;font-size:clamp(2.1rem,5.5vw,3.2rem);
+  line-height:1.05;letter-spacing:-.02em;margin:0 0 1.4rem
+}
+.bio{color:var(--muted);max-width:72ch;margin:0 0 1.2rem;font-size:.97rem}
+.bio a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
+.bio a:hover{border-bottom-color:var(--spruce);color:var(--spruce)}
+
+.contact{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.contact a{
+  font-family:"IBM Plex Mono",monospace;font-size:.78rem;
+  text-decoration:none;color:var(--ink);
+  border:1px solid var(--rule);border-radius:2px;
+  padding:.42rem .7rem;background:transparent;
+  transition:background .15s ease,border-color .15s ease
+}
+.contact a:hover{background:var(--spruce);border-color:var(--spruce);color:#fff}
+
+/* ---------- sticky nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:10;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(8px);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)
+}
+.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:.8rem 0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:var(--muted);white-space:nowrap
+}
+.nav a:hover{color:var(--spruce)}
+
+/* ---------- sections ---------- */
+.section{padding:3.5rem 0 1rem}
+.section-head{
+  display:flex;align-items:baseline;gap:1rem;
+  border-bottom:1px solid var(--ink);padding-bottom:.55rem;margin-bottom:2rem
+}
+.section-head h2{
+  font-family:"IBM Plex Sans",sans-serif;font-weight:600;
+  font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0
+}
+.section-head .count{
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted);margin-left:auto
+}
+.prose p{max-width:72ch;margin:0 0 1rem}
+.prose h3{
+  font-family:Newsreader,Georgia,serif;font-weight:500;
+  font-size:1.22rem;line-height:1.3;margin:0 0 .8rem
+}
+
+.team{list-style:none;margin:0;padding:0;columns:2;column-gap:2rem}
+.team li{padding:0 0 .45rem;break-inside:avoid}
+.team .role{font-size:.85rem;color:var(--muted)}
+
+.item{display:grid;grid-template-columns:3.6rem 1fr;gap:1.2rem;padding:0 0 1.9rem}
+.year{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted);padding-top:.25rem}
+.item h3{
+  font-family:Newsreader,Georgia,serif;font-weight:500;
+  font-size:1.22rem;line-height:1.3;margin:0 0 .35rem;letter-spacing:-.005em
+}
+.byline{font-size:.9rem;color:var(--muted);margin:0 0 .1rem}
+.outlet{font-size:.9rem;margin:0 0 .7rem;color:var(--ink)}
+.outlet em{font-style:italic}
+
+.links{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:0;padding:0}
+.links a{
+  font-family:"IBM Plex Mono",monospace;font-size:.71rem;
+  text-decoration:none;color:var(--spruce);
+  background:var(--spruce-soft);border-radius:2px;
+  padding:.24rem .5rem;display:inline-block;
+  transition:background .15s ease,color .15s ease
+}
+.links a:hover{background:var(--spruce);color:#fff}
+
+footer{
+  border-top:1px solid var(--rule);margin-top:3rem;padding:2rem 0 4rem;
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted)
+}
+footer a{color:var(--muted)}
+
+a:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px}
+
+/* ---------- responsive ---------- */
+@media(max-width:640px){
+  .hero{padding:2.5rem 0 2rem}
+  .item{grid-template-columns:1fr;gap:.3rem}
+  .year{padding-top:0}
+  .team{columns:1}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; ingridhuitfeldt.com</a>
+    <p class="eyebrow">Research project &middot; Research Council of Norway 326391</p>
+    <h1>The Gender Pay Gap: Firms, Children, and Unpaid Work</h1>
+
+    <p class="bio">
+      The project is funded by the
+      <a href="https://www.forskningsradet.no/en/">Research Council of Norway</a>
+      (project 326391, programme Welfare, Working Life and Migration) and hosted by
+      <a href="https://www.ssb.no/en/forskning/forskning-i-ssb">Statistics Norway</a>.
+      Project period: 2021&ndash;2026. Project leader: Ingrid Huitfeldt.
+    </p>
+
+    <ul class="contact">
+      <li><a href="https://prosjektbanken.forskningsradet.no/project/FORISS/326391">Project page at the Research Council of Norway</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#progress">Work in progress</a></li>
+      <li><a href="#theses">Theses</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#norsk">Norsk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section class="section" id="about">
+  <div class="wrap prose">
+    <div class="section-head"><h2>About the project</h2></div>
+    <p>Women earn less than men. The earnings difference narrows substantially when comparing individuals within the same firm; however, we know little about why men and women sort into different firms, or earn different wages within the same firm.</p>
+    <p>The first goal of the project is to offer new descriptive evidence on how differences within firms contribute to gender differences in the labor market: how much of the gender wage gap within firms is due to differences in tasks and promotions, and whether women sort to lower-paying firms because these firms compensate with non-monetary amenities.</p>
+    <p>The second goal is to investigate the economic and social causes of these differences: the different costs of children for men and women, firm-level policies such as flexible work hours, and specialization in paid versus unpaid work.</p>
+    <p>The project uses Norwegian administrative data that link workers, firms, families and health records.</p>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head"><h2>Publications and accepted papers</h2><span class="count">4</span></div>
+
+    <article class="item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Selection in Surveys: Using Randomized Incentives to Detect and Account for Nonresponse Bias</h3>
+        <p class="byline">Deniz Dutz, Ingrid Huitfeldt, Santiago Lacouture, Magne Mogstad, Alexander Torgovitsky and Winnie van Dijk</p>
+        <p class="outlet"><em>Review of Economic Studies</em></p>
+        <ul class="links">
+          <li><a href="https://doi.org/10.1093/restud/rdag003">Published version</a></li>
+          <li><a href="https://www.nber.org/papers/w29549">NBER wp29549</a></li>
+          <li><a href="https://voxeu.org/article/selection-surveys">VoxEU</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Reconciling Estimates of the Long-Term Earnings Effect of Fertility</h3>
+        <p class="byline">Simon Bensnes, Ingrid Huitfeldt and Edwin Leuven</p>
+        <p class="outlet">Accepted at the <em>Journal of Labor Economics</em></p>
+        <ul class="links">
+          <li><a href="https://www.rfberlin.com/wp-content/uploads/2026/01/26043.pdf">RFBerlin 043/26</a></li>
+          <li><a href="https://docs.iza.org/dp16174.pdf">IZA dp16174</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2025</div>
+      <div>
+        <h3>You Can&rsquo;t Force Me Into Caregiving: Paternity Leave and the Child Penalty</h3>
+        <p class="byline">Martin E. Andresen and Emily Nix</p>
+        <p class="outlet"><em>The Economic Journal</em></p>
+        <ul class="links">
+          <li><a href="https://doi.org/10.1093/ej/ueaf057">Published version</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2022</div>
+      <div>
+        <h3>What Causes the Child Penalty? Evidence from Adopting and Same-Sex Couples</h3>
+        <p class="byline">Martin E. Andresen and Emily Nix</p>
+        <p class="outlet"><em>Journal of Labor Economics</em></p>
+        <ul class="links">
+          <li><a href="https://doi.org/10.1086/718565">Published version</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="progress">
+  <div class="wrap">
+    <div class="section-head"><h2>Work in progress</h2><span class="count">5</span></div>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>What Do Corporate Boards Do? Aggregate Effects of Board Gender Quotas</h3>
+        <p class="byline">Christine Blandhol, Ingrid Huitfeldt and Ragnhild Schreiner</p>
+        <ul class="links">
+          <li><a href="https://cblandhol.github.io/JMP/gender_boards_abstract.pdf">Extended abstract (PDF)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Long Run Impacts of Child Benefits</h3>
+        <p class="byline">Anna Godøy and Edda Solbakken</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Breastfeeding, Health Outcomes and Maternal Labor Supply</h3>
+        <p class="byline">Nina Drange, Monique de Haan and Ingrid Huitfeldt</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3>Describing Gender Differences within the Firm</h3>
+        <p class="byline">Ingrid Huitfeldt, Sebastian S. Johansson, Andreas Kostøl, Jan Nimczik and Andrea Weber</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year"></div>
+      <div>
+        <h3 lang="no">Kjønnsgapet i sykefravær i Norge</h3>
+        <p class="byline">Simon Bensnes, Martin E. Andresen and Karen Johnsen</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="theses">
+  <div class="wrap">
+    <div class="section-head"><h2>Master&rsquo;s theses</h2><span class="count">2</span></div>
+
+    <article class="item">
+      <div class="year">2025</div>
+      <div>
+        <h3>Exploring Gender Disparities in Sick Leave in Norway</h3>
+        <p class="byline">Karen Johnsen &middot; University of Oslo</p>
+        <ul class="links">
+          <li><a href="https://frischsenteret.no/publication-details/?skrift_id=1806">Thesis</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="year">2025</div>
+      <div>
+        <h3>The Effect of Paternity Leave Quotas on Fertility Decisions</h3>
+        <p class="byline">Embla Vesterdal &middot; Paris School of Economics</p>
+      </div>
+    </article>  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="section-head"><h2>Team</h2></div>
+    <ul class="team">
+      <li>Ingrid Huitfeldt <span class="role">&middot; project leader</span></li>
+      <li>Edda Solbakken</li>
+      <li>Martin E. Andresen</li>
+      <li>Simon Bensnes</li>
+      <li>Christine Blandhol</li>
+      <li>Monique de Haan</li>
+      <li>Nina Drange</li>
+      <li>Anna Godøy</li>
+      <li>Andreas Kostøl</li>
+      <li>Edwin Leuven</li>
+      <li>Magne Mogstad</li>
+      <li>Jan Nimczik</li>
+      <li>Alexander Torgovitsky</li>
+      <li>Winnie van Dijk</li>
+      <li>Andrea Weber</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="norsk">
+  <div class="wrap prose" lang="no">
+    <div class="section-head"><h2>Om prosjektet</h2></div>
+    <h3>Kjønn og lønn: Hva betyr arbeidsplassen, barn og ubetalt arbeid for forskjeller mellom kjønn?</h3>
+    <p>Kvinner tjener mindre enn menn. Forskjellen blir mye mindre når vi sammenligner kvinner og menn i samme virksomhet, men vi vet lite om hvorfor kvinner og menn havner i ulike virksomheter, eller tjener ulikt i samme virksomhet.</p>
+    <p>Prosjektet beskriver kjønnsforskjeller innenfor og mellom virksomheter, og undersøker årsakene: hva barn koster mødre og fedre, virksomhetenes egen politikk, som fleksibel arbeidstid, og arbeidsdelingen mellom betalt og ubetalt arbeid.</p>
+    <p>Prosjektet er finansiert av Norges forskningsråd (prosjekt 326391, programmet Velferd, arbeidsliv og migrasjon) og ledes fra Statistisk sentralbyrå. Se også <a href="https://prosjektbanken.forskningsradet.no/project/FORISS/326391">prosjektet i Forskningsrådets prosjektbank</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Funded by the Research Council of Norway, project 326391 &middot; <a href="index.html">ingridhuitfeldt.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
